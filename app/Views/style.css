@@ -1,0 +1,186 @@
+body {
+    padding-top: 70px;
+    background-color: rgba(228, 217, 204, 0.821);
+}
+
+.navbar-custom {
+    background-color: #065c5de3;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: 40px; /* Tambahkan margin kanan agar menu terdorong lebih ke kanan */
+}
+
+/* Styling untuk brand (logo dan teks) */
+.navbar-brand {
+    display: flex; /* Mengatur flexbox untuk logo dan teks */
+    align-items: center; /* Menjaga logo dan teks pada garis tengah */
+    color: rgb(255, 255, 255); /* Warna teks putih */
+    font-weight: bold; /* Mengatur teks menjadi bold */
+    margin-right: auto;
+}
+
+.navbar-brand img {
+    margin-right: 25px; /* Jarak antara logo dan teks */
+}
+
+/* Styling untuk tautan navbar */
+.navbar-nav .nav-link {
+    color: #060606; /* Warna teks putih */
+    margin-left: 20px; /* Jarak antar tautan */
+    font-size: 1rem; /* Ukuran font */
+    transition: color 0.3s; /* Efek transisi saat hover */
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff0000; /* Warna teks saat hover */
+}
+
+/* Styling untuk tautan khusus */
+.navbar-nav .nav-link.login {
+    background-color: #e6e8ac; /* Warna latar belakang untuk Login */
+    padding: 8px 15px; /* Padding untuk tombol */
+    border-radius: 5px; /* Sudut membulat */
+    margin-left: 1px; /* Menghapus jarak kiri */
+    margin-right: 1px; /* Menghapus jarak kanan */
+}
+
+.navbar-nav .nav-link.signup {
+    background-color: #e6e8ac; /* Warna latar belakang untuk Sign Up */
+    padding: 8px 15px; /* Padding untuk tombol */
+    border-radius: 5px; /* Sudut membulat */
+    margin-left: 1px; /* Menghapus jarak kiri */
+    margin-right: 1px; /* Menghapus jarak kanan */
+}
+
+/* Styling untuk dropdown menu */
+.dropdown-menu {
+    background-color: #ffffff; /* Warna latar belakang dropdown */
+    border: none; /* Menghilangkan border dropdown */
+    box-shadow: 0 4px 10px rgba(28, 5, 132, 0.1);
+}
+
+.dropdown-item {
+    color: #0b0b0b; /* Warna teks dropdown */
+}
+
+.dropdown-item:hover {
+    background-color: #c482a6; /* Warna latar belakang saat hover */
+}
+
+/* Styling untuk form pencarian */
+.search-input {
+    border-radius: 20px; /* Membuat sudut input menjadi bulat */
+    border: none; /* Menghilangkan border default */
+    padding: 8px 15px; /* Padding di dalam input */
+    background-color: #fff; /* Warna latar belakang input */
+    color: #333; /* Warna teks input */
+    width: 300px; /* Lebar input */
+}
+
+.search-button {
+    border-radius: 20px; /* Membuat sudut tombol menjadi bulat */
+    padding: 8px 15px; /* Padding di dalam tombol */
+    margin-left: 5px; /* Jarak antara tombol dan input */
+}
+
+/* Card styles */
+#orphanage-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px; /* Margin sekitar daftar card */
+}
+
+.card {
+    width: 300px; /* Lebar card */
+    margin: 15px; /* Jarak antara card */
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    background-color: #424242; /* Warna latar belakang card */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Gambar pada card */
+.card img {
+    width: 100%;
+    height: 200px; /* Ukuran tinggi gambar */
+    object-fit: cover; /* Memastikan gambar sesuai dengan ukuran card */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styling untuk judul dan deskripsi */
+.card-body {
+    padding: 15px; 
+}
+
+.card-title {
+    font-size: 1.5rem; /* Ukuran font untuk judul */
+    font-weight: bold; /* Bold untuk judul */
+    margin: 0;
+    color: #f3f2f2; /* Warna judul */
+}
+
+.card-text {
+    color: #ffffff; /* Warna deskripsi */
+    margin-top: 5px; /* Jarak atas deskripsi */
+}
+
+/* Links for orphanage cards */
+a.text-decoration-none {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive card adjustments */
+@media (max-width: 768px) {
+    .card img {
+        height: 150px; /* Ukuran tinggi gambar di layar kecil */
+    }
+
+    .card-title {
+        font-size: 1.3rem; /* Ukuran font judul di layar kecil */
+    }
+
+    .search-input {
+        width: 200px; /* Lebar input di layar kecil */
+    }
+}
+
+/* Menyesuaikan tampilan untuk layar kecil */
+@media (max-width: 991.98px) {
+    .navbar-custom {
+        flex-direction: column; /* Mengatur flexbox menjadi kolom */
+        align-items: flex-start; /* Menjaga elemen di sisi kiri */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Mengatur menu navbar menjadi kolom */
+        width: 100%; /* Lebar penuh untuk navbar */
+        margin-top: 10px; /* Jarak atas untuk menu */
+    }
+
+    .form-control {
+        width: 100%; /* Lebar penuh untuk input pada layar kecil */
+        margin-top: 10px; /* Jarak atas untuk input */
+    }
+}
